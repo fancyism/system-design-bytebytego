@@ -15,7 +15,7 @@ Agent skill — เวิร์กโฟลว์ออกแบบระบบ�
 ใช้ได้กับ agent ที่รองรับ skills (Claude Code, Codex, OpenCode, ฯลฯ):
 
 ```bash
-npx skills add kanomwhandev/system-design-bytebytego
+npx skills add fancyism/system-design-bytebytego
 ```
 
 หรือคัดลอกโฟลเดอร์นี้ไปไว้ใน skill directory ของ agent คุณ (เช่น `~/.claude/skills/` หรือ `~/.agents/skills/`) แล้วเปิด session ใหม่
