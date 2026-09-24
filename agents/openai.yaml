@@ -1,0 +1,4 @@
+interface:
+  display_name: "System Design ByteByteGo"
+  short_description: "ByteByteGo-style scalable architecture guide"
+  default_prompt: "Use $system-design-bytebytego to design a scalable backend architecture with clear diagrams and trade-offs."
