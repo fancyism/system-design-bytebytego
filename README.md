@@ -1,33 +1,33 @@
 # system-design-bytebytego
 
-Agent skill — เวิร์กโฟลว์ออกแบบระบบสเกลสูงสไตล์ ByteByteGo ครบวงจร ตั้งแต่ pattern library จนถึง ADR
+**A ByteByteGo-style system-design workflow for AI agents — pick patterns, score scalability, draw the diagram, and ship an Architecture Decision Record your team can actually review.**
 
-## ทำอะไร / What it does
+Turns "design me a scalable backend" from a wall-of-text answer into a disciplined, repeatable workflow. The agent walks requirements through a pattern library, scores the design against a scaling & reliability rubric, drafts diagrams from a playbook, and finishes with a structured ADR including trade-offs.
 
-ออกแบบ distributed system แบบมีระเบียบ: เลือก pattern จาก pattern library, ประเมิน scalability/reliability ด้วย rubric, วาด diagram ตาม playbook, และจบด้วยเอกสาร architecture decision record พร้อม trade-off ครบ
+## What you get
 
-## ใช้เมื่อไหร่ / When to use
+- `SKILL.md` — the master workflow
+- `references/pattern-library.md` — load-balancing, caching, queueing, sharding, CDN, multi-region patterns with selection guidance
+- `references/scaling-reliability-rubric.md` — score any design on scalability, fault tolerance, and observability
+- `references/diagram-playbook.md` — interview-ready diagram conventions
+- `references/output-template.md` + `system-design-workflow.md` — the deliverable format
+- `agents/openai.yaml` — agent runtime profile
 
-ออกแบบ backend/API gateway/queue/cache/real-time, ประเมิน fault tolerance และ observability, หรือต้องการ interview-ready diagram และเอกสารเลือกใช้เทคโนโลยี
+## Use it when
 
-## ติดตั้ง / Install
+- Designing APIs, gateways, queues, caches, real-time updates, or data layers
+- Reviewing an architecture for scale, resilience, or observability gaps
+- You need a decision record with explicit trade-offs — not vibes
 
-ใช้ได้กับ agent ที่รองรับ skills (Claude Code, Codex, OpenCode, ฯลฯ):
+## Install
 
 ```bash
 npx skills add fancyism/system-design-bytebytego
 ```
 
-หรือคัดลอกโฟลเดอร์นี้ไปไว้ใน skill directory ของ agent คุณ (เช่น `~/.claude/skills/` หรือ `~/.agents/skills/`) แล้วเปิด session ใหม่
+Or copy this folder into your agent's skill directory and start a new session.
 
-## ไฟล์ใน repo
-
-- `SKILL.md` — ตัวเวิร์กโฟลว์หลัก
-- `references/` — pattern library, scaling & reliability rubric, diagram playbook, output template, workflow, source notes
-- `agents/openai.yaml`
-
-> ได้แรงบันดาลใจจาก [ByteByteGoHq/system-design-101](https://github.com/ByteByteGoHq/system-design-101) — เนื้อหาเขียนขึ้นใหม่ทั้งหมดเป็นเวิร์กโฟลว์ใช้งานจริงกับ agent
-
+> Inspired by the public notes in [ByteByteGoHq/system-design-101](https://github.com/ByteByteGoHq/system-design-101); all content here is an original workflow written for agent execution.
 
 ## License
 
